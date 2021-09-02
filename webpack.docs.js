@@ -8,7 +8,7 @@ const config = {
   },
   mode: 'production',
   output: {
-    path: path.resolve(__dirname, 'docs/scintilla'),
+    path: path.resolve(__dirname, 'docs'),
     publicPath: '/scintilla/',
     filename: '[name].[contenthash].js',
   },
