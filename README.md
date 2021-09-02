@@ -1,7 +1,8 @@
 # scintilla
 
-Scintilla repository.  
+This repository is a tribute to Scintilla magazine, amateur printed in years 93-94.  
 [scintilla](https://actarian.github.io/scintilla)
+
 
 ___
 
