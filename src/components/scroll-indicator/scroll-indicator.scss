@@ -1,0 +1,19 @@
+@import '../../scss/mixins';
+@import '../../scss/buttons';
+
+.scroll-indicator {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 4px;
+	background: black;
+	border-bottom: 1px solid black;
+	z-index: 1;
+
+	&__track {
+		width: 0;
+		height: 100%;
+		background: white;
+		transition: all ease-out 250ms;
+	}
+}

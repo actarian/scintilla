@@ -1,0 +1,98 @@
+@import '../../scss/mixins';
+@import '../../scss/buttons';
+
+.issue-footer {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	width: calc(100% - 20px);
+	height: 44px;
+	left: 10px;
+	bottom: 10px;
+	z-index: 2;
+	transform: translateY(200%);
+	transition: all ease-in-out 250ms;
+
+	&.active {
+		transform: translateY(0);
+	}
+
+	&__logo {
+		height: 44px;
+		padding: 10px;
+		background: black;
+		box-shadow: 0 8px 5px -4px rgba(0, 0, 0, 0.2%);
+
+		&>img {
+			max-height: 100%;
+		}
+	}
+
+	&__title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		box-shadow: 0 8px 5px -4px rgba(0, 0, 0, 0.2%);
+
+		&,
+		&:link,
+		&:active,
+		&:focus,
+		&:visited,
+		&:hover {
+			background: black;
+			color: white;
+			text-decoration: none;
+		}
+	}
+
+	&__counter,
+	&__prev,
+	&__next {
+		min-width: 44px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 2px;
+		margin-left: 1px;
+		font-size: 13px;
+		// letter-spacing: 0.05em;
+		@include unselectable();
+	}
+
+	&__counter {
+		color: black;
+		background: white;
+		box-shadow: 0 8px 5px -4px rgba(0, 0, 0, 0.2%);
+		padding: 0 8px;
+	}
+
+	&__prev,
+	&__next {
+		color: white;
+		background: #222222;
+		box-shadow: 0 8px 5px -4px rgba(0, 0, 0, 0.2%);
+		// cursor: pointer;
+
+		svg {
+			width: 24px;
+			height: 24px;
+			fill: currentColor;
+		}
+	}
+
+	&__spacer {
+		flex-grow: 1;
+	}
+
+
+	@media (min-width: 1024px) {}
+
+	@media (max-width: 1023px) {
+		&__title {
+			display: none;
+		}
+	}
+}

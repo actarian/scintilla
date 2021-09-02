@@ -1,0 +1,11 @@
+@import '../../scss/mixins';
+@import '../../scss/buttons';
+
+.img {
+
+	transition: opacity ease-in-out 250ms;
+
+	&:not(.loaded) {
+		opacity: 0;
+	}
+}

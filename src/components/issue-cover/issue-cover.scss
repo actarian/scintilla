@@ -1,0 +1,20 @@
+@import '../../scss/mixins';
+@import '../../scss/buttons';
+
+.card--cover {
+	display: flex;
+	padding: 10px;
+	border-radius: 3px;
+	background: white;
+	// cursor: pointer;
+
+	a {
+		@include aspect-clip(1920, 2716);
+
+		img {
+			max-width: 100%;
+			filter: grayscale(100%);
+			aspect-ratio: 1920 / 2716;
+		}
+	}
+}
