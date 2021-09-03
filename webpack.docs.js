@@ -17,7 +17,7 @@ const config = {
     filename: 'index.html',
     title: 'Scintilla',
     description: 'A tribute to Scintilla magazine, amateurly printed in years 93-94.',
-    image: 'https://actarian.github.io/scintilla/assets/img/scintilla-03/cover.jpg',
+    image: 'https://actarian.github.io/scintilla/assets/img/logo.png',
     url: 'https://actarian.github.io/scintilla',
   },
   performance: {

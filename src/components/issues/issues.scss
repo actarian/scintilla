@@ -8,8 +8,16 @@
 	width: 100%;
 	min-height: 100vh;
 
-	&>.container {
-		padding: 60px;
+	@media (min-width:1024px) {
+		.container {
+			padding: 60px;
+		}
+	}
+
+	@media (max-width:1023px) {
+		.container {
+			padding: 30px 15px;
+		}
 	}
 }
 
@@ -18,9 +26,18 @@
 	justify-content: center;
 	flex-wrap: wrap;
 
-	.listing__item {
-		width: 300px;
-		margin: 20px;
+	@media (min-width:1024px) {
+		.listing__item {
+			width: 300px;
+			margin: 20px;
+		}
+	}
+
+	@media (max-width:1023px) {
+		.listing__item {
+			width: 140px;
+			margin: 15px;
+		}
 	}
 }
 

@@ -1,48 +1,13 @@
 import * as React from 'react';
-import { useLayoutEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { className } from '../@hooks/class-name/class-name';
+import { useScrollInteraction } from '../@hooks/scroll-interaction/scroll-interaction';
 import { IssueFooterProps } from '../types';
 import './issue-footer.scss';
 
-let ti: any = 0;
-
 export function IssueFooter(props: IssueFooterProps) {
 
-  const [active, setActive] = useState(true);
-
-  const onTimeout = () => {
-    if (ti) {
-      clearTimeout(ti);
-    }
-    ti = setTimeout(() => {
-      setActive(false);
-    }, 2000);
-  };
-
-  const previous = { x: 0, y: 0 };
-
-  const onMove = (event: MouseEvent) => {
-    if (Math.sqrt(Math.abs(previous.x - event.clientX) * Math.abs(previous.y - event.clientY)) > 30) {
-      previous.x = event.clientX;
-      previous.y = event.clientY;
-      setActive(true);
-      onTimeout();
-    }
-  };
-
-  onTimeout();
-
-  useLayoutEffect(() => {
-    window.addEventListener('mousemove', onMove);
-
-    return () => {
-      if (ti) {
-        clearTimeout(ti);
-      }
-      window.removeEventListener('mousemove', onMove);
-    }
-  }, [props.totalPages]);
+  const [active, setActive] = useScrollInteraction([props.totalPages]);
 
   return (
     <div className={className('issue-footer', { active })}>

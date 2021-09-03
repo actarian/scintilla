@@ -49,7 +49,7 @@ export type IssueParams = {
 
 // views
 
-export type ButtonProps = {
+export type ImgProps = {
   onClick?: (event: any) => void;
 }
 

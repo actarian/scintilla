@@ -1,15 +1,6 @@
 @import '../../scss/mixins';
 @import '../../scss/buttons';
 
-.section--Issue {}
-
-.container {
-	/*
-	max-width: 900px;
-	margin: 0 auto;
-  */
-}
-
 .listing--page {
 	display: flex;
 	flex-direction: column;
@@ -24,16 +15,28 @@
 	}
 
 	&.contain {
-		.listing__item {
-			align-items: center;
-			margin: 10px;
-			height: 100vh;
+		@media (min-width: 512px) {
+			.listing__item {
+				align-items: center;
+				margin: 10px;
+				height: 100vh;
 
-			.card--page {
-				width: 100%;
-				height: 100%;
-				max-width: 90vw;
-				max-height: 90vh;
+				.card--page {
+					width: 100%;
+					height: 100%;
+					max-width: 90vw;
+					max-height: 90vh;
+				}
+			}
+		}
+
+		@media (max-width: 511px) {
+			.listing__item {
+				max-width: #{"min(1500px, 90vw)"};
+
+				.card--page {
+					@include aspect-clip(1920, 2716);
+				}
 			}
 		}
 	}
@@ -67,6 +70,7 @@
 		position: absolute;
 		display: block;
 		font-size: #{"min(120px, 20vw)"};
+		font-weight: 900;
 		color: rgba(255, 255, 255, 0.2);
 		content: attr(data-number);
 		// content: "("attr(data-number)")";

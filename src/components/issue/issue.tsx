@@ -81,7 +81,11 @@ export function Issue(props: IssueProps) {
       if (element) {
         const rect = element.getBoundingClientRect();
         // element.scrollIntoView();
+        (window as any).scrollDisabled = true;
         window.scrollBy(0, rect.top - window.innerHeight / 100 * 5);
+        setTimeout(() => {
+          (window as any).scrollDisabled = false;
+        });
       }
     }
   }
