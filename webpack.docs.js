@@ -16,8 +16,8 @@ const config = {
     template: './src/index.html',
     filename: 'index.html',
     title: 'Scintilla',
-    description: 'Scintilla',
-    image: 'https://avatars.githubusercontent.com/u/1841442?s=460&u=9d963e264cc39206782c9e0dbfdbdb0c6d25b477&v=4',
+    description: 'A tribute to Scintilla magazine, amateurly printed in years 93-94.',
+    image: 'https://actarian.github.io/scintilla/assets/img/scintilla-03/cover.jpg',
     url: 'https://actarian.github.io/scintilla',
   },
   performance: {
