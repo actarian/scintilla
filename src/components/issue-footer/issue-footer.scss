@@ -72,7 +72,6 @@
 	&__prev,
 	&__next {
 		color: white;
-		background: #222222;
 		box-shadow: 0 8px 5px -4px rgba(0, 0, 0, 0.2%);
 		// cursor: pointer;
 
@@ -93,6 +92,11 @@
 	@media (max-width: 1023px) {
 		&__title {
 			display: none;
+		}
+
+		&__prev,
+		&__next {
+			background: #222222;
 		}
 	}
 }

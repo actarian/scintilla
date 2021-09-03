@@ -75,7 +75,6 @@
 	&__next,
 	&__button {
 		color: white;
-		background: #222222;
 		box-shadow: 0 8px 5px -4px rgba(0, 0, 0, 0.2%);
 		// cursor: pointer;
 
@@ -105,6 +104,12 @@
 
 		&__counter {
 			display: none;
+		}
+
+		&__prev,
+		&__next,
+		&__button {
+			background: #222222;
 		}
 	}
 
