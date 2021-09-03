@@ -160,11 +160,11 @@ function setPlugins(config) {
     */
     new HtmlWebpackPlugin(html),
     new webpack.SourceMapDevToolPlugin({
-      filename: `[name].[contenthash].[ext].map`
+      filename: `app/[name].[contenthash][ext].map`
     }),
     new webpack.ProgressPlugin({ percentBy: 'entries' }),
     new MiniCssExtractPlugin({
-      filename: `[name].[contenthash].css`,
+      filename: `app/[name].[contenthash].css`,
     }),
   ];
   if (config.analyzer) {

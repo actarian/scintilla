@@ -10,7 +10,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'docs'),
     publicPath: '/scintilla/',
-    filename: '[name].[contenthash].js',
+    filename: 'app/[name].[contenthash].js',
   },
   html: {
     template: './src/index.html',
