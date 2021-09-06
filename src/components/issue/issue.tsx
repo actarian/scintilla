@@ -52,8 +52,13 @@ export function Issue(props: IssueProps) {
         const pages = Array.prototype.slice.call(containerRef.current.querySelectorAll('.card--page'));
         const page = pages.find(x => x.getAttribute('data-url') === url);
         if (page) {
+          // console.log('window.scrollBy');
+          (window as any).scrollDisabled = true;
           page.scrollIntoView();
           window.scrollBy(0, - window.innerHeight / 100 * 5);
+          setTimeout(() => {
+            (window as any).scrollDisabled = false;
+          });
           /*
           const rect = page.getBoundingClientRect();
           window.scrollTo({

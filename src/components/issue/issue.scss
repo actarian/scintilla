@@ -36,6 +36,8 @@
 
 				.card--page {
 					@include aspect-clip(1920, 2716);
+					border: 1px solid rgba(255, 255, 255, 0.2);
+					border-radius: 3px;
 				}
 			}
 		}
@@ -47,12 +49,15 @@
 
 			.card--page {
 				@include aspect-clip(1920, 2716);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				border-radius: 3px;
 			}
 		}
 	}
 }
 
 .card--page {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -69,6 +74,8 @@
 	&:before {
 		position: absolute;
 		display: block;
+		top: 50%;
+		transform: translateY(-50%);
 		font-size: #{"min(120px, 20vw)"};
 		font-weight: 900;
 		color: rgba(255, 255, 255, 0.2);

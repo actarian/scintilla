@@ -19,7 +19,7 @@ export function Img(props: ImgProps & HTMLProps<HTMLImageElement>) {
 
   const onLoad = () => {
     setLoaded(true);
-    console.log("Loaded!");
+    // console.log("Loaded!");
   };
 
   const onClick = (typeof props.onClick === 'function') ? (event: any) => (props.onClick as (event: any) => void)(event) : undefined;

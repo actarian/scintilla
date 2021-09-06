@@ -23,7 +23,7 @@ export function useScrollRepos(containerRef: RefObject<HTMLDivElement>, selector
 
   useLayoutEffect(() => {
     if (scrollTo) {
-      console.log(scrollTo);
+      // console.log('scrollTo', scrollTo);
       // Scroll to element with should be in view after rendering
       scrollTo.scrollIntoView();
       // Scroll by height of nav
